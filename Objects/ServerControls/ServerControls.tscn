@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://c84o5lfgfujq1"]
+
+[ext_resource type="Script" path="res://Objects/ServerControls/ServerControls.gd" id="1_fytuo"]
+
+[node name="ServerControls" type="Node2D"]
+script = ExtResource("1_fytuo")
+
+[node name="HitButton" type="ColorRect" parent="."]
+z_index = 2
+offset_right = 80.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="HitButton"]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 60.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "HIT"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HitButton"]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 60.0
+offset_bottom = 40.0
+text = "HIT"
+
+[node name="StandButton" type="ColorRect" parent="."]
+z_index = 2
+offset_left = 95.0
+offset_right = 175.0
+offset_bottom = 40.0
+
+[node name="SplitButton" type="ColorRect" parent="."]
+z_index = 2
+offset_left = 285.0
+offset_right = 365.0
+offset_bottom = 40.0
+
+[node name="DoubleButton" type="ColorRect" parent="."]
+z_index = 2
+offset_left = 190.0
+offset_right = 270.0
+offset_bottom = 40.0
+
+[node name="Cursor" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 85.0
+offset_bottom = 45.0
+color = Color(1, 0, 1, 1)

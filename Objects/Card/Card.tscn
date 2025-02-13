@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxpw6bd8kuvpx"]
+
+[ext_resource type="Texture2D" uid="uid://bgwqh0n76vsie" path="res://assets/cards.png" id="1_ufcrv"]
+[ext_resource type="Script" path="res://Objects/Card/Card.gd" id="2_v00e2"]
+
+[node name="Card" type="Sprite2D"]
+texture = ExtResource("1_ufcrv")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 48, 64)
+script = ExtResource("2_v00e2")

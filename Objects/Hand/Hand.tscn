@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgfu28jx2613x"]
+
+[ext_resource type="Script" path="res://Objects/Hand/Hand.gd" id="1_043ny"]
+[ext_resource type="PackedScene" uid="uid://dfs7w3k6knkee" path="res://Objects/ChipStack/ChipStack.tscn" id="2_7b1tr"]
+
+[node name="Hand" type="Node2D"]
+script = ExtResource("1_043ny")
+
+[node name="Label" type="Label" parent="."]
+offset_top = -23.0
+offset_right = 40.0
+
+[node name="ChipStack" parent="." instance=ExtResource("2_7b1tr")]
+z_index = 1
+position = Vector2(29, -55)

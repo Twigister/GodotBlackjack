@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjitteqnpklt8"]
+
+[ext_resource type="Script" path="res://Objects/Player/Player.gd" id="1_cgob8"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_cgob8")
+
+[node name="Controls" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Actions" type="HBoxContainer" parent="Controls"]
+layout_mode = 0
+offset_right = 202.0
+offset_bottom = 40.0
+
+[node name="Hit" type="Button" parent="Controls/Actions"]
+layout_mode = 2
+text = "Hit"
+metadata/_edit_use_anchors_ = true
+
+[node name="Stand" type="Button" parent="Controls/Actions"]
+layout_mode = 2
+text = "Stand"
+metadata/_edit_use_anchors_ = true
+
+[node name="Double" type="Button" parent="Controls/Actions"]
+layout_mode = 2
+text = "Double"
+metadata/_edit_use_anchors_ = true
+
+[node name="Split" type="Button" parent="Controls/Actions"]
+layout_mode = 2
+text = "Split"
+metadata/_edit_use_anchors_ = true
+
+[node name="BetActions" type="HBoxContainer" parent="Controls"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Bet" type="Button" parent="Controls/BetActions"]
+layout_mode = 2
+text = "Bet"
+metadata/_edit_use_anchors_ = true
+
+[node name="SpinBox" type="SpinBox" parent="Controls/BetActions"]
+layout_mode = 2
+min_value = 1.0
+max_value = 20.0
+value = 3.0
+rounded = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Stack" type="Label" parent="."]
+offset_top = 38.0
+offset_right = 40.0
+offset_bottom = 61.0
+
+[connection signal="pressed" from="Controls/Actions/Hit" to="." method="_on_hit_pressed"]
+[connection signal="pressed" from="Controls/Actions/Stand" to="." method="_on_stand_pressed"]
+[connection signal="pressed" from="Controls/Actions/Double" to="." method="_on_double_pressed"]
+[connection signal="pressed" from="Controls/Actions/Split" to="." method="_on_split_pressed"]
+[connection signal="pressed" from="Controls/BetActions/Bet" to="." method="_on_bet_pressed"]

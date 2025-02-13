@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://b04ts6g1pf0cb"]
+
+[ext_resource type="Texture2D" uid="uid://behnvlsqs0n6r" path="res://assets/blackhack.png" id="1_7v5n6"]
+[ext_resource type="Script" path="res://Main.gd" id="2_xe0g1"]
+[ext_resource type="PackedScene" uid="uid://cjitteqnpklt8" path="res://Objects/Player/Player.tscn" id="3_yt41h"]
+[ext_resource type="PackedScene" uid="uid://qhttfv5ngqjx" path="res://Objects/Deck/Deck.tscn" id="4_tfd45"]
+[ext_resource type="PackedScene" uid="uid://coksgmsvtfka6" path="res://Objects/Dealer/Dealer.tscn" id="5_11xvl"]
+[ext_resource type="PackedScene" uid="uid://c84o5lfgfujq1" path="res://Objects/ServerControls/ServerControls.tscn" id="6_8tpr3"]
+
+[node name="Main" type="Node2D"]
+z_index = -2
+script = ExtResource("2_xe0g1")
+
+[node name="Player" parent="." instance=ExtResource("3_yt41h")]
+
+[node name="Deck" parent="." instance=ExtResource("4_tfd45")]
+
+[node name="Dealer" parent="." instance=ExtResource("5_11xvl")]
+
+[node name="ServerControls" parent="." instance=ExtResource("6_8tpr3")]
+position = Vector2(13, 532)
+
+[node name="Felt" type="Sprite2D" parent="."]
+z_index = -1
+texture = ExtResource("1_7v5n6")
+centered = false

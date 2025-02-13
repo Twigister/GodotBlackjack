@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqe7l0635lw7"]
+
+[ext_resource type="Texture2D" uid="uid://b0qgko4qmsglj" path="res://assets/chips.png" id="1_nieto"]
+[ext_resource type="Script" path="res://Objects/ChipStack/Chip.gd" id="1_xk1rp"]
+
+[node name="Chip" type="Sprite2D"]
+texture = ExtResource("1_nieto")
+centered = false
+region_enabled = true
+region_rect = Rect2(192, 0, 32, 48)
+script = ExtResource("1_xk1rp")
